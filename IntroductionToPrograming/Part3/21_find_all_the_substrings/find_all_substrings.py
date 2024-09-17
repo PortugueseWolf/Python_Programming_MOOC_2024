@@ -2,8 +2,10 @@ word = input("Please type in a word: ")
 char = input("Please type in a character: ")
 
 if char in word:
-    index = word.find(char)
-    while index < len(word) + 3:
+    while True:
+        index = word.find(char)
+        #print(index)
+        if index >= len(word) - 3 or index < 0:
+            break
         print(word[index:index + 3])
-        word = word[index : index]
-        index
+        word = word[index + 1:]
