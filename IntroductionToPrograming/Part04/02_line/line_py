@@ -1,0 +1,10 @@
+def line(n, x):
+    if x == "":
+        x = "*"
+    print(x[0:1] * n)
+
+
+if __name__ == "__main__":
+    line(7, "%")
+    line(10, "LOL")
+    line(3, "")
