@@ -1,5 +1,4 @@
 def remove_smallest(numbers: list) -> list:
-    rest
 
 
 if __name__ == "__main__":
