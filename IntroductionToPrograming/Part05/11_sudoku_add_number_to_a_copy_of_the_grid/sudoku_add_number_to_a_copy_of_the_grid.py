@@ -1,6 +1,3 @@
-import copy
-
-
 def print_sudoku(sudoku: list) -> None:
     column_counter = 0
     row_counter = 0
@@ -32,7 +29,6 @@ def print_sudoku(sudoku: list) -> None:
 
 def copy_and_add(sudoku: list, row_no: int, column_no: int, number: int) -> list:
     new_list = []
-    row = []
     
     for i in sudoku:
         new_list.append(i[:])
