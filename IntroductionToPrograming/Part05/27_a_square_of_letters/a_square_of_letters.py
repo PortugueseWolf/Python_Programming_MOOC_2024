@@ -1,5 +1,3 @@
-number_to_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 layers = int(input("Layers: "))
 # 64
 outer_limit = layers * 2 - 1
