@@ -1,15 +1,12 @@
 layers = int(input("Layers: "))
-# 64
-outer_limit = layers * 2 - 1
-square = []
 
 
-for index in range(0, outer_limit):
-    if index == 0:
-        line = chr(64 + layers) * outer_limit
-        square.append(line)
-    
-    if index > 0 and index < layers:
-        line = 
-for line in square:
-    print(line)
+size = layers * 2 - 1
+
+for i in range(size):
+    row = ""
+    for j in range(size):
+        layer = min(i, j, size - 1 - i, size - 1 - j)
+        letter = chr(65 + layers - 1 - layer)
+        row += letter
+    print(row)
