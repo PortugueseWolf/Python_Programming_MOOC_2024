@@ -13,7 +13,7 @@ def find_words(search_term: str) -> list:
                     words_found.append(line)
 
             if "*" in search_term:
-            
+                print()
     print(words_found)
     
     return words_found
