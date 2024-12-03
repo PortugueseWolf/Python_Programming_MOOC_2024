@@ -17,7 +17,7 @@ while True:
     if user_command == 3:
         with open("dictionary.txt", "a") as new_file:
             for line in entries:
-                new_file.write(f"line[0];line[1]\n")
+                new_file.write(f"{line[0]};{line[1]}\n")
         print("Bye!")
         break
 
