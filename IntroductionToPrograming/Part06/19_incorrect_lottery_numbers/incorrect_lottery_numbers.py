@@ -1,5 +1,6 @@
-def filter_incorrect() -> list:
+def filter_incorrect() -> None:
     correct_numbers = []
+    good_line = True
 
     with open("lottery_numbers.csv", "r") as numbers:
         for line in numbers:
@@ -11,28 +12,41 @@ def filter_incorrect() -> list:
             except:
                 continue
 
-            numbers = line[1].split(",")
+            numbers = parts[1].split(",")
 
-            try:
-                repeat_numbers = []
-                for number in numbers:
-                    try:
-                        lottery_number = int(number)
-                    except:
-                        
-                    
-                    if number in repeat_numbers:
-                        break
+            if len(numbers) != 7:
+                continue
 
-                    if number < 1 or number > 39:
-                        break
+            repeat_numbers = []
+            for number in numbers:
+                try:
+                    lottery_number = int(number)
+                except:
+                    good_line = False
+                    break
+                
+                if lottery_number in repeat_numbers:
+                    good_line = False
+                    break
 
-                    repeat_numbers.append(number)
+                if lottery_number < 1 or lottery_number > 39:
+                    good_line = False
+                    break
 
-                    if number in repeat_numbers:
-                        break
-    
-    return correct_numbers
+                repeat_numbers.append(lottery_number)
+
+            if good_line:
+                correct_numbers.append(line)
+
+            repeat_numbers.clear()
+            good_line = True
+
+    try:
+        with open("correct_numbers.csv", "w") as new_file:
+            for line in correct_numbers:
+                new_file.write(line + "\n")
+    except:
+        print("Error writing to file")
 
 if __name__ == "__main__":
-    print(filter_incorrect())
+    filter_incorrect()
