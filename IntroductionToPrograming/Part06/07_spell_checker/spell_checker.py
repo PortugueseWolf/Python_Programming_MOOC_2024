@@ -5,7 +5,7 @@ with open("wordlist.txt") as new_file:
         word = line.replace("\n", "")
         dictionary.append(word)
 
-if False:
+if True:
     user_input = input("Write text: ")
 else:
     user_input = "a aah aahing aaahii ab"

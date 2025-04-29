@@ -1,4 +1,4 @@
-if False:
+if True:
     student_file = input("Student information: ")
     exercise_file = input("Exercises completed: ")
     exam_file = input("Exam points: ")
