@@ -1,6 +1,6 @@
 from datetime import datetime
 
-if False:
+if True:
     day = int(input("Day: "))
     month = int(input("Month: "))
     year = int(input("Year: "))
