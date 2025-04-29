@@ -6,11 +6,11 @@ Please write a new version of the program in the previous exercise. In addition 
 ```markdown
 Limit: 2
 The consecutive sum: 1 + 2 = 3
-```
+
 ```markdown
 Limit: 10
 The consecutive sum: 1 + 2 + 3 + 4 = 10
-```
+
 ```markdown
 Limit: 18
 The consecutive sum: 1 + 2 + 3 + 4 + 5 + 6 = 21
